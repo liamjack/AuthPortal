@@ -67,6 +67,7 @@ Other parameters are configurable inside the database, via PHPMyAdmin for the mo
 * `duration_remember` : the time that a user will remain logged in for when ticking "remember me" on login. Must respect PHP's [strtotime](http://php.net/manual/en/function.strtotime.php) format.
 * `duration_non_remember` : the time a user will remain logged in when not ticking "remember me" on login.  Must respect PHP's [strtotime](http://php.net/manual/en/function.strtotime.php) format.
 * `bcrypt_cost` : the algorithmic cost of the bcrypt hashing function, can be changed based on hardware capabilities
+* `site_timezone` : the site's timezone
 
 The rest of the parameters generally do not need changing.
 
