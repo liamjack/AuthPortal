@@ -1,0 +1,18 @@
+<form class="pure-form" name="form" ng-submit="postForm('auth/login', form, login)" novalidate>
+	
+	<div class="errormsg" ng-show="errormsg"><i class="fa fa-fw fa-exclamation-circle"></i> {{errormsg}}</div>
+	<div class="successmsg" ng-show="successmsg"><i class="fa fa-fw fa-check-circle"></i> {{successmsg}}</div>
+
+	<span ng-show="!successmsg">
+		<input type="text" class="pure-input-2-3" ng-model="form.username" placeholder="Username" ng-required ng-minlength="3" ng-maxlength="30">
+		<input type="password" class="pure-input-2-3" ng-model="form.password" placeholder="Password" ng-required ng-minlength="6" ng-maxlength="72">
+
+		<label for="remember" class="pure-checkbox">
+            <input id="remember" ng-model="form.remember" type="checkbox"> Remember me
+        </label>
+
+		<button class="pure-button pure-input-2-3 pure-button-primary" ng-disabled="form.$invalid || form.$pristine">Submit</button><br/><br/>
+		<a href="#/reset">Forgotten Password ?</a><br/>
+		<a href="#/resendactivation">Activation email not received ?</a>
+	</span>
+</form>

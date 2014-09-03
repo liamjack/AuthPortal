@@ -1,0 +1,15 @@
+<form class="pure-form" name="form" ng-submit="postForm('auth/register', form)" novalidate>
+	
+	<div class="errormsg" ng-show="errormsg"><i class="fa fa-fw fa-exclamation-circle"></i> {{errormsg}}</div>
+	<div class="successmsg" ng-show="successmsg"><i class="fa fa-fw fa-check-circle"></i> {{successmsg}}</div>
+
+	<span ng-show="!successmsg">
+		<input type="email" class="pure-input-2-3" ng-model="form.email" placeholder="Email Address" ng-required ng-minlength="5" ng-maxlength="100">
+		
+		<input type="text" class="pure-input-2-3" ng-model="form.username" placeholder="Username" ng-required ng-minlength="3" ng-maxlength="30">
+		<input type="password" class="pure-input-2-3" ng-model="form.password" placeholder="Password" ng-required ng-minlength="6" ng-maxlength="72">
+		<input type="password" class="pure-input-2-3" ng-model="form.repeatpassword" placeholder="Repeat Password" ng-required ng-minlength="6" ng-maxlength="72">
+
+		<button class="pure-button pure-input-2-3 pure-button-primary" type="submit" ng-disabled="form.$invalid || form.$pristine">Submit</button>
+	</span>
+</form>

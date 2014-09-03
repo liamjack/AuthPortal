@@ -1,0 +1,10 @@
+<form class="pure-form" name="form" ng-submit="postForm('auth/resendactivation', form)" novalidate>
+	<legend>Resend Activation Email</legend>
+	
+	<div class="errormsg" ng-show="errormsg"><i class="fa fa-fw fa-exclamation-circle"></i> {{errormsg}}</div>
+	<div class="successmsg" ng-show="successmsg"><i class="fa fa-fw fa-check-circle"></i> {{successmsg}}</div>
+
+	<input type="email" class="pure-input-2-3" ng-model="form.email" placeholder="Email Address" ng-required ng-minlength="5" ng-maxlength="100">
+
+	<button class="pure-button pure-input-2-3 pure-button-primary" type="submit" ng-disabled="form.$invalid || form.$pristine">Submit</button><br/><br/>
+</form>

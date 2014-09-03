@@ -1,0 +1,18 @@
+<form class="pure-form" name="form" ng-submit="ajaxReset(form)" novalidate>
+	<legend>Reset Password</legend>
+	
+	<div class="errormsg" ng-show="errormsg"><i class="fa fa-fw fa-exclamation-circle"></i> {{errormsg}}</div>
+	<div class="successmsg" ng-show="successmsg"><i class="fa fa-fw fa-check-circle"></i> {{successmsg}}</div>
+
+	<span ng-show="!successmsg">
+		Reset key : <strong>{{key}}</strong><br/><br/>
+		<input type="password" class="pure-input-2-3" ng-model="form.password" placeholder="New password" ng-required ng-minlength="6" ng-maxlength="72">
+		<input type="password" class="pure-input-2-3" ng-model="form.repeatpassword" placeholder="Repeat new password" ng-required ng-minlength="6" ng-maxlength="72">
+
+		<button class="pure-button pure-input-2-3 pure-button-primary" type="submit" ng-disabled="form.$invalid || form.$pristine">Submit</button><br/><br/>	
+	</span>
+
+	<span ng-show="successmsg">
+		<a class="pure-button pure-button-primary" href="#/login">Go to login</a>
+	</span>
+</form>

@@ -1,0 +1,41 @@
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>AuthPortal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/base-min.css">
+		<link rel="stylesheet" href="css/pure-min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/loading-bar.css">
+    </head>
+    <body ng-controller="mainController">
+        <div class="container">
+        	<h1>AuthPortal</h1>
+			<div class="pure-menu pure-menu-open pure-menu-horizontal">
+				<ul>
+					<li ng-class="getClass('/home')"><a href="#/home">Home</a></li>
+					<li ng-class="getClass('/password')"><a href="#/password">Change Password</a></li>
+					<li ng-class="getClass('/email')"><a href="#/email">Change Email</a></li>
+					<li ng-class="getClass('/delete')"><a href="#/delete">Delete Account</a></li>
+					<li><a ng-click="logout()" href="#">Logout</a></li>
+				</ul>
+			</div>
+			
+			<div ng-view></div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+		<script src="js/loading-bar.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/filters.js"></script>
+		<script src="js/directives.js"></script>
+
+    </body>
+</html>

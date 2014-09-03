@@ -1,0 +1,13 @@
+<form class="pure-form" name="form" ng-submit="postForm('auth/email', form, getUserData)" novalidate>
+	<div class="errormsg" ng-show="errormsg"><i class="fa fa-fw fa-exclamation-circle"></i> {{errormsg}}</div>
+	<div class="successmsg" ng-show="successmsg"><i class="fa fa-fw fa-check-circle"></i> {{successmsg}}</div>
+
+	<span ng-show="!successmsg">
+		<p>Your current email address is : <strong>{{userdata.email}}</strong></p>
+
+		<input type="email" class="pure-input-2-3" ng-model="form.email" placeholder="New Email Address" ng-required ng-minlength="5" ng-maxlength="100">
+		<input type="password" class="pure-input-2-3" ng-model="form.password" placeholder="Password" ng-required ng-minlength="6" ng-maxlength="72">
+
+		<button class="pure-button pure-input-2-3 pure-button-primary" type="submit" ng-disabled="form.$invalid || form.$pristine">Change Email Address</button><br/><br/>
+	</span>
+</form>

@@ -1,0 +1,25 @@
+body {
+	font-family: 'Raleway';
+	text-align: center;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #1A99AD;
+}
+
+a:hover {
+	color: #29D7F2;
+}
+
+.big {
+	margin-top: 40px;
+	font-size: 120px;
+}

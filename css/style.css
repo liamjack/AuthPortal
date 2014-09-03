@@ -1,0 +1,60 @@
+body {
+	font-family: 'Raleway';
+	text-align: center;
+}
+.container {
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #1A99AD;
+}
+
+a:hover {
+	color: #29D7F2;
+}
+
+form {
+	margin-top: 40px;
+}
+
+form h2 {
+	margin: 10px 0;
+}
+
+form input {
+	margin-bottom: 10px;
+}
+form button {
+	margin-top: 10px;
+}
+
+form .errormsg {
+	margin-bottom: 20px;
+	color: #BF4141;
+	font-weight: 700;
+}
+
+form .successmsg {
+	margin-bottom: 20px;
+	color: #34B526;
+	font-weight: 700;
+}
+
+.pure-menu-selected {
+	font-weight: 700;
+}
+
+input.ng-invalid {
+	border-color: #FF0000 !important;
+}
